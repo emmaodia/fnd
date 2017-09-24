@@ -1,17 +1,43 @@
 import React, { Component } from 'react';
-import './App.css';
+import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          {/*<img src={logo} className="App-logo" alt="logo" />*/}
-          <h2>Welcome to <code>fnd</code> app</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload. Hi React!
-        </p>
+      <div>
+        <Navbar inverse fixedTop>
+          <Grid>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <a href="/">fnd app</a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+          </Grid>
+        </Navbar>
+        <Jumbotron>
+          <Grid>
+            <h3>fnd devs and dev events near you!</h3>
+            <p>
+              <Button
+                bsStyle="success"
+                bsSize="large"
+                href="http://react-bootstrap.github.io/components.html"
+                target="_blank">
+                fnd devs
+              </Button>
+            </p>
+            <p>
+              <Button
+                bsStyle="success"
+                bsSize="large"
+                href="http://react-bootstrap.github.io/components.html"
+                target="_blank">
+                fnd event
+              </Button>
+            </p>
+          </Grid>
+        </Jumbotron>
       </div>
     );
   }
