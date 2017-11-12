@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
-import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+// import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+import { Navbar, NavbarBrand, Form, Input, Card, CardTitle, CardText, CardDeck,
+ CardBody, CardFooter } from 'reactstrap';
+import './App.css'
 
 class App extends Component {
+  // constructor(props) {
+  //   super(props);
+
+  //   this.toggle = this.toggle.bind(this);
+  //   this.state = {
+  //     isOpen: false
+  //   };
+  // }
+  // toggle() {
+  //   this.setState({
+  //     isOpen: !this.state.isOpen
+  //   });
+  // }
   render() {
     return (
-      <div>
+      /*<div>
         <Navbar inverse fixedTop>
           <Grid>
             <Navbar.Header>
@@ -38,6 +54,47 @@ class App extends Component {
             </p>
           </Grid>
         </Jumbotron>
+      </div>*/
+      <div>
+        <Navbar color="faded" light expand="md" className="Header">
+          <NavbarBrand href="/">
+            <h2>FND APP</h2>
+          </NavbarBrand>
+        </Navbar>
+        <div className="ResultContainer">
+          <Form className="ResultForm">
+            <Input type="select" className="SearchCateria">
+              <option>Name</option>
+              <option>Location</option>
+            </Input>
+          </Form>
+          <div className="ResultWrapper">
+            <CardDeck>
+              <Card className="text-center">
+                <CardBody>
+                  <CardTitle></CardTitle>
+                  <CardText></CardText>
+                </CardBody>
+                <CardFooter></CardFooter>
+              </Card>
+              <Card className="text-center">
+                <CardBody>
+                  <CardTitle></CardTitle>
+                  <CardText></CardText>
+                </CardBody>
+                <CardFooter></CardFooter>
+              </Card>
+              <Card className="text-center">
+                <CardBody>
+                  <CardTitle></CardTitle>
+                  <CardText></CardText>
+                </CardBody>
+                <CardFooter></CardFooter>
+              </Card>
+            </CardDeck>
+          </div>
+          
+        </div>
       </div>
     );
   }

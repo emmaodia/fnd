@@ -1,24 +1,96 @@
+/* 
 .App {
+    text-align: center;
+  }
+
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+
+  .App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+
+  .App-intro {
+    font-size: large;
+  }
+
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+*/
+#root {
+  font-size: 100%;
+}
+.Header {
+  background: #3e3b3b;
+  border-radius: 0;
+  padding-bottom: 0 !important;
+}
+.Header h2 {
+  line-height: 40px;
+  font-weight: normal;
+  font-size: 25px;
+  color: #fff;
+}
+
+.ResultContainer {
+  width: 100%;
+  padding: 2em;
+}
+.ResultForm {
+  width: 80%;
+  margin: auto;
+  /*padding: 2em 0 1em 0;*/
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.SearchCateria {
+  height: 50px !important;
+  font-size: 20px !important;
+  line-height: 40px;
+  padding: .7em 1em;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.ResultWrapper {
+  width: 70%;
+  margin: auto;
 }
-
-.App-intro {
-  font-size: large;
+.card-deck {
+  padding: 2em;
+  font-size: 14px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.card-deck .card {
+  border-radius: 5px;
+  box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, .2);
 }
+.card-body {
+  height: 200px;
+}
+.card-footer {
+  background-color: transparent !important;
+  height: 50px !important;
+  border-top: 2px solid rgba(0, 0, 0, .2) !important;
+}
+@media only screen and (max-width: 1000px){
+  .ResultWrapper {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 850px){
+  .ResultWrapper {
+    width: 80%;
+  }
+}
+/* @media only screen and (max-width: 575px){
+  .card-deck .card {
+    -webkit-flex: 0 1 calc(46% - 1em);
+    -moz-flex: 0 1 calc(46% - 1em);
+    -ms-flex: 0 1 calc(46% - 1em);
+    -o-flex: 0 1 calc(46% - 1em);
+    flex: 0 1 calc(46% - 1em);
+  }
+} */
