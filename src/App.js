@@ -1,45 +1,37 @@
 import React, { Component } from 'react';
-import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+import './App.css'
+import AuthComponent from './components/AuthComponent'
+import FindButtonComponent from './components/FindButtonComponent'
+import GeolocationComponent from './components/GeolocationComponent'
+import ListViewRenderComponent from './components/ListViewRenderComponent'
 
 class App extends Component {
+  state = {
+    step: 1,
+  };
+
+  nextStep = () => {
+    this.setState({
+      step: this.state.step + 1 
+    });
+  }
+
   render() {
-    return (
-      <div>
-        <Navbar inverse fixedTop>
-          <Grid>
-            <Navbar.Header>
-              <Navbar.Brand>
-                <a href="/">fnd app</a>
-              </Navbar.Brand>
-              <Navbar.Toggle />
-            </Navbar.Header>
-          </Grid>
-        </Navbar>
-        <Jumbotron>
-          <Grid>
-            <h3>fnd devs and dev events near you!</h3>
-            <p>
-              <Button
-                bsStyle="success"
-                bsSize="large"
-                href="http://react-bootstrap.github.io/components.html"
-                target="_blank">
-                fnd devs
-              </Button>
-            </p>
-            <p>
-              <Button
-                bsStyle="success"
-                bsSize="large"
-                href="http://react-bootstrap.github.io/components.html"
-                target="_blank">
-                fnd event
-              </Button>
-            </p>
-          </Grid>
-        </Jumbotron>
-      </div>
-    );
+    switch (this.state.step) {
+      case 1:
+        return (
+          <div>
+            <GeolocationComponent />
+            <AuthComponent nextStep={this.nextStep} />
+          </div>
+          )
+      case 2:
+        return <FindButtonComponent nextStep={this.nextStep} />
+      case 3:
+        return <ListViewRenderComponent nextStep={this.nextStep} />
+      default:
+        return null;
+    }
   }
 }
 
