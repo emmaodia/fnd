@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.17.1",
     "bootstrap": "^4.0.0-beta",
+    "jquery": "^3.2.1",
     "react": "^15.6.2",
-    "react-bootstrap": "^0.31.3",
     "react-dom": "^15.6.2",
+    "react-fontawesome": "^1.6.1",
     "react-scripts": "1.0.13",
     "reactstrap": "^5.0.0-alpha.3"
   },

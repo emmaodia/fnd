@@ -1,0 +1,42 @@
+/* 
+	nav
+ */
+.navbar {
+	/*border: 1px solid red;*/
+	margin-bottom: 0px !important;
+}
+
+/* 
+	frame #1
+ */
+.ComponentContainer {
+	background: url('../images/bg.png') no-repeat center center;
+	background-size: 100% 100%;
+	/*border: 1px solid blue;*/
+	display: flex;           
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center;     	
+  height: 587px;
+}
+.AuthButton {
+	color: #fff !important;
+	font-size: 20px !important;
+  padding: .5em !important;
+  line-height: 40px !important;
+  border-radius: 10px !important;
+  font-style: normal;
+  /*margin: 1em !important;*/
+}
+
+/* 
+	frame #2
+ */
+
+.ButtonComponent {
+	flex-direction: row;  
+	/*justify-content: space-between;*/
+}
+.ButtonComponent .AuthButton {
+	margin: .5em !important;
+}
