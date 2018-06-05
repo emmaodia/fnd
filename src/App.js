@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css'
-import AuthComponent from './components/AuthComponent'
+//import AuthComponent from './components/AuthComponent'
 import FindButtonComponent from './components/FindButtonComponent'
 import GeolocationComponent from './components/GeolocationComponent'
 import ListViewRenderComponent from './components/ListViewRenderComponent'
@@ -12,7 +12,7 @@ class App extends Component {
 
   nextStep = () => {
     this.setState({
-      step: this.state.step + 1 
+      step: this.state.step + 1
     });
   }
 
@@ -22,7 +22,7 @@ class App extends Component {
         return (
           <div>
             <GeolocationComponent />
-            <AuthComponent nextStep={this.nextStep} />
+            {/*<AuthComponent nextStep={this.nextStep} />*/}
           </div>
           )
       case 2:

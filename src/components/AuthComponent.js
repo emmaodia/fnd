@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import './Style.css'
 import HeaderComponent from './HeaderComponent';
 import { Button } from 'reactstrap';
@@ -15,7 +15,7 @@ class AuthComponent extends Component {
                 js.src = "//connect.facebook.net/en_US/sdk.js";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
-            
+
             window.fbAsyncInit = function() {
                 window.FB.init({
                   appId      : '1667800729926213',
@@ -25,23 +25,23 @@ class AuthComponent extends Component {
                 });
             };
         }
-        
+
         facebookLogin = () => {
             /*window.FB.login(
-                this.checkLoginState(), 
+                this.checkLoginState(),
                 { scope : 'email, public_profile' } //Add scope whatever you need about the facebook user
             ); */
-            
-            window.FB.login(
+
+            /*window.FB.login(
                 function(resp){
                     this.statusChangeCallback(resp);
                 }.bind(this),{ scope : 'email,user_work_history,user_education_history,user_location,public_profile' });
         }
-        
+
         checkLoginState() {
             alert("Checking Login Status")
             console.log( "Checking login status..........." );
-            
+
             window.FB.getLoginStatus(function(response) {
                 alert("FB Callback")
                 console.log("----------->")
@@ -49,7 +49,7 @@ class AuthComponent extends Component {
                 this.statusChangeCallback(response);
             }.bind(this));
         }
-        
+
         statusChangeCallback(response) {
             console.log('statusChangeCallback');
             console.log(response);
@@ -63,7 +63,7 @@ class AuthComponent extends Component {
                 console.log('Import error', 'Error occured while importing data', 'error')
             }
         }
-        
+
         fetchDataFacebook = () => {
             console.log('Welcome!  Fetching your information.... ');
 
@@ -73,7 +73,7 @@ class AuthComponent extends Component {
                 alert( 'Successful login for: ' + user.name );
             });
         }
-    
+
     render() {
         return (
         	<div>
@@ -92,4 +92,4 @@ class AuthComponent extends Component {
       }
 }
 
-export default AuthComponent;
+export default AuthComponent;*/
