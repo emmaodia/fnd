@@ -7,20 +7,28 @@ import axios from 'axios';
 class App extends Component {
 
       state = {
-        gists = []
+        gists : []
       }
 
       componentDidMount() {
-      axios.get(`https://jsonplaceholder.typicode.com/users`)
-        .then(res => {
-          const persons = res.data;
-          this.setState({ persons });
+      axios.get(`https://api.github.com/gists/public`)
+        .then(result => {
+          const gists = result.data;
+          this.setState({ gists });
+        })
+        .then(() => {
+          console.log('success');
+        })
+        .catch((error) =>{
+          console.log(error);
         })
     }
 
     render(){
       return(
-        <div>THis works</div>
+        <ul>
+        { this.state.gists.map(gist => <li>{gist.url}</li>)}
+      </ul>
       );
     }
 }
