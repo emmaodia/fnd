@@ -1,10 +1,2 @@
-fnd devs and dev events using geolocation. PWA and SPA.
-
-- React-BootStrap
-- geolocation
-- Github API
-- MeetUp API
-
-Removing Facebook Oauth from build.
-
+fnd peers and work together on projects.
 - Coming Back to the Project after 7 years. 
